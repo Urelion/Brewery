@@ -1,10 +1,7 @@
 package com.dre.brewery.integration.item;
 
-import com.dre.brewery.Brew;
 import com.dre.brewery.P;
 import com.dre.brewery.filedata.BConfig;
-import com.dre.brewery.recipe.BRecipe;
-import com.dre.brewery.recipe.CustomItem;
 import com.dre.brewery.recipe.PluginItem;
 import dev.lone.itemsadder.api.CustomStack;
 import dev.lone.itemsadder.api.ItemsAdder;
@@ -16,7 +13,7 @@ import org.bukkit.inventory.ItemStack;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ItemSadderIntegration extends PluginItem {
+public class ItemsAdderIntegration extends PluginItem {
 
 	private Map<String, CustomStack> customStackMap = new HashMap<>();
 
