@@ -3,6 +3,7 @@ package com.dre.brewery.integration.item;
 import com.dre.brewery.P;
 import com.dre.brewery.filedata.BConfig;
 import com.dre.brewery.recipe.PluginItem;
+import dev.lone.itemsadder.api.CustomStack;
 import io.lumine.mythic.lib.api.item.NBTItem;
 import org.bukkit.inventory.ItemStack;
 
@@ -29,5 +30,10 @@ public class MMOItemsPluginItem extends PluginItem {
 			BConfig.hasMMOItems = false;
 			return false;
 		}
+	}
+
+	@Override
+	public boolean matchesWithCustomItem(CustomStack item) {
+		return false;
 	}
 }

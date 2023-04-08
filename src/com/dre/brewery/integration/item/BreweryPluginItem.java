@@ -3,6 +3,7 @@ package com.dre.brewery.integration.item;
 import com.dre.brewery.Brew;
 import com.dre.brewery.recipe.BRecipe;
 import com.dre.brewery.recipe.PluginItem;
+import dev.lone.itemsadder.api.CustomStack;
 import org.bukkit.ChatColor;
 import org.bukkit.inventory.ItemStack;
 
@@ -25,6 +26,11 @@ public class BreweryPluginItem extends PluginItem {
 			}
 			return ChatColor.stripColor(item.getItemMeta().getDisplayName()).equalsIgnoreCase(getItemId());
 		}
+		return false;
+	}
+
+	@Override
+	public boolean matchesWithCustomItem(CustomStack item) {
 		return false;
 	}
 }

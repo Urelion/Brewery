@@ -3,6 +3,7 @@ package com.dre.brewery.integration.item;
 import com.dre.brewery.P;
 import com.dre.brewery.filedata.BConfig;
 import com.dre.brewery.recipe.PluginItem;
+import dev.lone.itemsadder.api.CustomStack;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import org.bukkit.inventory.ItemStack;
 
@@ -28,6 +29,11 @@ public class SlimefunPluginItem extends PluginItem {
 			BConfig.hasSlimefun = false;
 			return false;
 		}
+		return false;
+	}
+
+	@Override
+	public boolean matchesWithCustomItem(CustomStack item) {
 		return false;
 	}
 }
