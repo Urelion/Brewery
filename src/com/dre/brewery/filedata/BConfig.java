@@ -104,6 +104,9 @@ public class BConfig {
 	public static SQLSync sqlSync;
 	public static boolean sqlDrunkSync;
 
+	// ItemsAdder
+	public static boolean hasItemsAdder;
+
 	public static P p = P.p;
 
 	private static boolean checkConfigs() {

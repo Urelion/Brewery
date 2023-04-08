@@ -1,6 +1,7 @@
 package com.dre.brewery.recipe;
 
 import com.dre.brewery.P;
+import dev.lone.itemsadder.api.CustomStack;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
@@ -211,4 +212,11 @@ public abstract class PluginItem extends RecipeItem implements Ingredient {
 		constructors.remove(pluginId.toLowerCase());
 	}
 
+	public boolean matchesWithCustomStack(CustomStack item) {
+		return false;
+	}
+
+	public boolean matchesWithCustomItem(CustomStack item) {
+		return false;
+	}
 }
