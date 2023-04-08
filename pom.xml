@@ -114,7 +114,7 @@
 			<url>https://maven.enginehub.org/repo/</url>
 		</repository>
 		<repository>
-			<!-- GriefPrevention, SlimeFun, Towny, Brewery -->
+			<!-- GriefPrevention, SlimeFun, Towny, Brewery, ItemsAdder -->
 			<id>jitpack.io</id>
 			<url>https://jitpack.io</url>
 		</repository>
@@ -319,6 +319,13 @@
 			<artifactId>annotations</artifactId>
 			<version>16.0.2</version>
 			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<!-- https://github.com/LoneDev6/API-ItemsAdder -->
+			<groupId>com.github.LoneDev6</groupId>
+			<artifactId>api-itemsadder</artifactId>
+			<version>3.4.1-r4</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 </project>
