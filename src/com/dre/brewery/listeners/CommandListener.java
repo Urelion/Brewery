@@ -9,6 +9,7 @@ import com.dre.brewery.recipe.RecipeItem;
 import com.dre.brewery.utility.BUtil;
 import com.dre.brewery.utility.PermissionUtil;
 import com.dre.brewery.utility.Tuple;
+import dev.lone.itemsadder.api.CustomStack;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -418,7 +419,18 @@ public class CommandListener implements CommandExecutor {
 		@SuppressWarnings("deprecation")
 		ItemStack hand = P.use1_9 ? player.getInventory().getItemInMainHand() : player.getItemInHand();
 		if (hand != null) {
-			p.msg(sender, p.languageReader.get("CMD_Configname", hand.getType().name().toLowerCase(Locale.ENGLISH)));
+			String itemName = null;
+			if (BConfig.hasItemsAdder) {
+				CustomStack customHand = CustomStack.byItemStack(hand);
+				if (customHand != null) {
+					itemName = customHand.getNamespacedID();
+				}
+			}
+
+			if (itemName == null) {
+				itemName = hand.getType().name().toLowerCase(Locale.ENGLISH);
+			}
+			p.msg(sender, p.languageReader.get("CMD_Configname", itemName));
 		} else {
 			p.msg(sender, p.languageReader.get("CMD_Configname_Error"));
 		}

@@ -220,6 +220,7 @@ public class BConfig {
 		hasChestShop = plMan.isPluginEnabled("ChestShop");
 		hasShopKeepers = plMan.isPluginEnabled("Shopkeepers");
 		hasSlimefun = plMan.isPluginEnabled("Slimefun");
+		hasItemsAdder = plMan.isPluginEnabled("ItemsAdder");
 
 		// various Settings
 		DataSave.autosave = config.getInt("autosave", 3);
